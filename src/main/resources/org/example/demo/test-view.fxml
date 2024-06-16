@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.demo.TestTaskController">
+    <padding>
+        <Insets left="10" right="10"/>
+    </padding>
+    <HBox spacing ="10" >
+     <Label text="общее значение списания (сумма операции + комиссия)"/>
+     <TextField fx:id="total"/>
+    </HBox>
+    <HBox spacing ="10">
+        <Label text=" % комиссии"/>
+        <TextField fx:id="percent" />
+    </HBox>
+    <HBox spacing ="10">
+        <Label text="фиксированная часть"/>
+        <TextField fx:id="fix" />
+    </HBox>
+
+    <Button fx:id="CountButton" text="Расчитать значение комиссии" onAction="#onCountButtonClick"/>
+    <Label fx:id="commission"/>
+    <Label fx:id="feedback"/>
+</VBox>
